@@ -1,21 +1,21 @@
 # openELIS-Docker
 
-## Requiremenst:
+## Requirements:
 
-    1. linux (preferable)
+    1. ubuntu (preferable)
     2. docker
 
-## Steps
+## Steps:
 
 step-1: 
 
         git clone git@github.com:Fahad4654/openELIS-Docker.git
 
-step-2: replace localhost from some place where the are indicated saying (#change localhost here with the ip address)
+step-2: replace localhost from some place where they are indicated saying (#change localhost here with the ip address)
 
         1. scripts/common.properties
         2. scripts/context.xml
-        3. fhir-docker/files/ROOT.war/WEB-INF/classes/application.yaml (if you have ubuntu)
+        3. fhir-docker/files/ROOT.war/WEB-INF/classes/application.yaml **open with ubuntu desktop, not so important though** 
 
 step-3:
 
@@ -43,7 +43,7 @@ step-8:
 
 step-9: wait for some moments and browse
 
-        https://<span style="color:red">ipaddress</span>:8443/OpenELIS-Global/loginpage
+        https://**ipaddress**:8443/OpenELIS-Global/loginpage
 
 
 ## Credentials: 
