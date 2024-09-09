@@ -43,7 +43,7 @@ step-8:
 
 step-9: wait for some moments and browse
 
-        https://$${\color{red}ipaddress}$$:8443/OpenELIS-Global/loginpage
+        https://<span style="color:red">ipaddress</span>:8443/OpenELIS-Global/loginpage
 
 
 ## Credentials: 
