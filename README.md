@@ -15,7 +15,7 @@ step-2: replace localhost from some place where they are indicated saying (#chan
 
         1. scripts/common.properties
         2. scripts/context.xml
-        3. fhir-docker/files/ROOT.war/WEB-INF/classes/application.yaml **open with ubuntu desktop, not so important though** 
+        3. fhir-docker/files/ROOT.war/WEB-INF/classes/application.yaml `open with ubuntu desktop, not so important though`
 
 step-3:
 
