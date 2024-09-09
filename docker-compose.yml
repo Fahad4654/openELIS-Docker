@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  openelis:
+    build: .
+    image: openelis:1.0
+    restart: "unless-stopped"
+    container_name: openelis
+    command: /bin/bash -c "/OpenElis/scripts/tomcatStart.sh && tail -f /opt/tomcat8/logs/catalina.out && tail -f /dev/null"
+    depends_on:
+      - postgres
+    network_mode: "host"
+
+  postgres:
+    container_name: postgres
+    image: postgres:13
+    environment:
+      POSTGRES_DB: clinlims
+      POSTGRES_USER: clinlims
+      POSTGRES_PASSWORD: clinlims
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./files/DB/clinlims.sql:/docker-entrypoint-initdb.d/clinlims.sql
+    network_mode: "host"
+
+volumes:
+  pgdata:
+    driver: local
